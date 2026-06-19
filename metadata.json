@@ -1,0 +1,6 @@
+{
+  "name": "Pegadas Espaciais",
+  "description": "Estética Avançada e Mapa Astral em São Paulo – O encontro da ciência com o cosmos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

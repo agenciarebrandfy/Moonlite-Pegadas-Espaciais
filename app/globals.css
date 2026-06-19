@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-playfair), Georgia, serif;
+  --font-sans: var(--font-sans), sans-serif;
+  --color-mythic-dark: #12081F;
+  --color-mythic-purple: #2E1A3A;
+  --color-gold: #C5A572;
+  --color-gold-hover: #D7B483;
+  --color-cream: #F5F0E8;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #12081F;
+}
+::-webkit-scrollbar-thumb {
+  background: #C5A572;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D7B483;
+}
+
+/* Global utility classes */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Cosmic Background animation */
+.stars-bg {
+  background-image: radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 40px),
+                    radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 30px),
+                    radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 40px);
+  background-size: 550px 550px, 350px 350px, 250px 250px;
+  background-position: 0 0, 40px 60px, 130px 270px;
+  animation: bgScroll 120s linear infinite;
+}
+
+@keyframes bgScroll {
+  from { background-position: 0 0, 40px 60px, 130px 270px; }
+  to { background-position: 550px 550px, 390px 410px, 380px 820px; }
+}
+
+/* Zodiac Spin animation */
+.zodiac-spin {
+  animation: spin-slow 20s linear infinite;
+}
+.zodiac-spin:hover {
+  animation-play-state: paused;
+}
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
